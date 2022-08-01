@@ -1,0 +1,52 @@
+.login-text {
+    width: 400px;
+
+    padding: 20px;
+    border: 1px solid #e2e2e2;
+
+    p {
+        color: #7d7d7d
+    }
+
+    input {
+        border: 1px solid #e2e2e2;
+        outline: none;
+        color: #2e2e2e47;
+        line-height: 1.15;
+        height: 50px;
+        padding: 16px 20px 17px;
+        width: 100%;
+        margin-top: 5px;
+    }
+
+    a {
+        color: #1696e7;
+    }
+
+    .check {
+        input {
+            width: auto;
+            // align-items: flex-start;
+
+        }
+
+    }
+
+    .btn_shop_now {
+        border: 1px solid #ff6000;
+        background-color: #ff6000;
+        color: #fff;
+        padding: 13px 27px;
+        border-radius: 6px;
+        transition: .4s;
+        margin-top: 10px;
+        margin-bottom: 20px;
+
+
+        &:hover {
+            background-color: #252525;
+            border: 1px solid #252525;
+            color: #fff;
+        }
+    }
+}
