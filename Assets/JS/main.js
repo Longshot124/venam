@@ -205,3 +205,23 @@ function ShowCount()
   document.querySelector('#countspan').innerHTML = count;
 }
 ShowCount();
+
+window.onscroll = () => stickHeader();
+
+let header = document.querySelector(".header_bottom");
+let sticky = header.offsetTop;
+
+function stickHeader() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky-header");
+  } else {
+    header.classList.remove("sticky-header");
+  }
+}
+
+let categoryToggleBtn = document.querySelector(".drpdwn-category");
+
+categoryToggleBtn.addEventListener("click", () => {
+  let categoryMenu = $(".category-menu");
+  categoryMenu.slideToggle();
+})

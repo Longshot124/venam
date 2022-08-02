@@ -339,6 +339,32 @@
         
     }
 
+    .filters{
+        margin-top: 2rem;
+        .right{
+            position: relative;
+            padding: 5px;
+           .nice-select{
+                position: absolute;
+                left: 21.5rem;
+                top: 0rem !important;
+            }
+            i{
+                font-size: 25px;
+                margin-right: 15px;
+                cursor: pointer;
+                border: 1px solid #e2e2e2;
+                padding: 4px;
+                border-radius: 5px;
+
+                
+            }
+            span{
+                margin-right: 14px;
+            }
+        }
+    }
+
     .featured {
         margin-top: 100px;
         width: 300px;
