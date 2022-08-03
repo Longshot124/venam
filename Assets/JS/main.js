@@ -42,6 +42,47 @@ $(document).ready(function() {
       // instead of a settings object
     ]
   });
+  $('.also-slider').slick({
+    dots: false,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 6,
+    slidesToScroll: 1,
+    prevArrow: `
+    <button type="button" class="slick_prev"><i class="fa-solid fa-angle-left"></i></button>
+    `,
+    nextArrow: `
+    <button type="button" class="slick_next"><i class="fa-solid fa-angle-right"></i></button>
+    `,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+      // You can unslick at a given breakpoint now by adding:
+      // settings: "unslick"
+      // instead of a settings object
+    ]
+  });
 
   $(document).ready(function(){
     $(".owl-carousel").owlCarousel({
@@ -164,22 +205,22 @@ $('.categoriesSlider').slick({
 if(localStorage.getItem('basket') === null){
   localStorage.setItem('basket',JSON.stringify([]))
 }
-let add_btns = document.querySelectorAll('#addtocart')
+let add_btns = document.querySelectorAll('.extra_move-bottom a')
 
-for (let btn of add_btns) {
+add_btns.forEach((btn, index) => {
   btn.addEventListener('click',(event) => {
     event.preventDefault();
     let basket = JSON.parse(localStorage.getItem('basket'))
-    let p_id = event.target.parentElement.parentElement.parentElement.id;
     let p_img = event.target.parentElement.parentElement.previousElementSibling.children[0].src
     let p_name = event.target.parentElement.parentElement.nextElementSibling.children[0].children[0].innerText
+    console.log(p_name);
     let p_price = event.target.parentElement.parentElement.nextElementSibling.nextElementSibling.children[0].children[0].innerText
-    let current_product = basket.find(x => x.id === p_id)
-    
+    let current_product = basket.find(x => x.id === index)
+    console.log(p_img);
     if(current_product === undefined)
     {
       basket.push({
-        id:p_id,
+        id: index + 1,
         name:p_name,
         img:p_img,
         price : p_price.replace('US $',''),
@@ -196,7 +237,11 @@ for (let btn of add_btns) {
     ShowCount();
    
   })
-}
+})
+
+// for (let btn of add_btns) {
+ 
+// }
 
 function ShowCount()
 {

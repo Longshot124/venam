@@ -1,4 +1,31 @@
 #shop {
+    .home-prod{
+      
+       
+        
+     }   
+     .prodContent{
+        position: relative;
+        &:hover .cartAdd{
+            opacity: 1 !important;
+            bottom: 80px;
+            
+        }
+        .cartAdd {
+            opacity: 0;
+            position: absolute;
+            bottom: 50px;
+            left: 2px;
+            width: 100%;
+            transition: .5s;
+
+            .cartBottom{
+                text-align: center;
+            }
+
+          
+        }
+    }
     .contact-top {
         background-color: #f2f2f2;
         // margin: 3rem 0;
@@ -24,8 +51,7 @@
         }
     }
 
-    input {}
-
+    
     label {
         width: 200px;
 
@@ -199,7 +225,7 @@
         }
     }
 
-    .All-Products {
+    .All-Productss {
         .products {
             margin: 2rem 0;
         }
@@ -245,7 +271,7 @@
             // background:  url(/Assets/photos/banner-1.jpg) no-repeat center;
             // background-size: cover;
             img {
-                width: 100%;
+                width: 181%;
                 height: 254px;
 
             }
@@ -331,10 +357,7 @@
                     padding: 3px;
                     background-size: 5px;
                 }
-                span{
-                    
-                    // left: 1rem;
-                }
+               
             }
         
     }
@@ -344,6 +367,7 @@
         .right{
             position: relative;
             padding: 5px;
+            margin-top: 2rem;
            .nice-select{
                 position: absolute;
                 left: 21.5rem;
@@ -367,6 +391,7 @@
 
     .featured {
         margin-top: 100px;
+        margin-bottom: 10px;
         width: 300px;
 
         .heads {
@@ -378,6 +403,7 @@
 
         .middle {
             border: 1px solid #dee2e6;
+            margin-bottom: 30px;
 
             p {
                 background-color: #ff6000;
@@ -402,5 +428,12 @@
             font-size: 10px;
         }
     }
+    
+        .nice-select{left: 22.5rem;}
+        
 
+    
+    
 }
+
+
